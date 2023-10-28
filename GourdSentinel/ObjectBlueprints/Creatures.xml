@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+    <object Name="Andrea52_GourdSentinel_Gourd Sentinel" Inherits="MutatedPlant">
+        <part Name="Brain" Wanders="false" Hostile="true" Mobile="false"/>
+        <part Name="Description" Short="Circuitry gleams wetly behind vacant eyes carved of plantflesh. =pronouns.Possessive= gaping maw suggests a simple question — who was Eater and who was Eaten?"/>
+        <part Name="Render" DisplayName="gourd sentinel" Tile="Andrea52_GourdSentinel/gourd_sentinel.png" TileColor="&amp;O" ColorString="&amp;O" DetailColor="g"/>
+        <tag Name="Gender" Value="neuter" />
+    </object>
+</objects>

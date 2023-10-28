@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+    <object Name="Andrea52_GourdSentinel_Chunk of Pumpkin" Inherits="Snack">
+        <part Name="Render" DisplayName="{{o|chunk of pumpkin}}" ColorString="&amp;O" TileColor="&amp;O" DetailColor="K" Tile="Items/sw_rawmeat2.bmp" />
+        <part Name="Description" Short="Glistening orange flesh protrudes from a calloused rind, shot through by veins of dark liquid. Every so often it moves on its own." />
+		<part Name="Food" IllOnEat="true" Satiation="Meal" Thirst="1000" Message="It's juicy and sweet, but the texture is unpleasantly similar to raw meat."/>
+        <part Name="Commerce" Value="2" />
+        <part Name="Physics" Category="Food" Weight="1" />
+        <part Name="FearOnEat" Strength="1d8" Duration="4d6" />
+        <part Name="PreservableItem" Result="Andrea52_GourdSentinel_Pumpkin Pie" Number="1" />
+        <tag Name="Plant" />
+    </object>
+
+    <object Name="Andrea52_GourdSentinel_Pumpkin Pie" Inherits="Preservable">
+        <part Name="Render" DisplayName="{{o|pumpkin pie}}" Tile="items/sw_pie.bmp" ColorString="&amp;O" TileColor="&amp;O" DetailColor="w"/>
+        <part Name="Description" Short="Orange custard fills a frame of delicate pastry. The gourd has been tamed."/>
+        <part Name="Food" Satiation="Meal" Message="It's warm, fragrant, and delicious."/>
+        <part Name="Commerce" Value="10"/>
+        <part Name="PreparedCookingIngredient" type="fear" charges="1" />
+    </object>
+</objects>
