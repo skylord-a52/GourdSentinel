@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bodyparttypevariants>
+
+    <bodyparttypevariant VariantOf="Face" Type="Carved Grimace" Category="Plant" UsuallyOn="Body" />
+	<bodyparttypevariant VariantOf="Arm" Type="Twisting Vine" Category="Plant">
+</bodyparttypevariants>
+
+<anatomies>
+<anatomy Name="Andrea52_GourdSentinel Gourd" Category="Plant">
+	<part Type="Carved Grimace"/>
+	<part Type="Back" />
+	<part Type="Bine" Laterality="Right">
+        <part Type="Twisting Vine" Laterality="Right" SupportsDependent="Leaves" />
+    </part>
+    <part Type="Twisting Vine" Laterality="Left">
+        <part Type="Leaf" Laterality="Left" SupportsDependent="Leaves" />
+    </part>
+    <part Type="Missile Weapon" Laterality="Right" />
+    <part Type="Missile Weapon" Laterality="Left" />
+    <part Type="Leaves" DependsOn="Leaves" />
+	<part Type="Roots" />
+</anatomy>
+</anatomies>

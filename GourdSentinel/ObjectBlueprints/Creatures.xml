@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
-    <object Name="Andrea52_GourdSentinel_Gourd Sentinel" Inherits="MutatedPlant">
+    <object Name="Andrea52_GourdSentinel_Gourd Sentinel" Inherits="MutatedVine">
+        <part Name="Render" DisplayName="gourd sentinel" Tile="Andrea52_GourdSentinel/gourd_sentinel.png" TileColor="&amp;O" ColorString="&amp;O" DetailColor="g"/>
         <part Name="Brain" Wanders="false" Hostile="true" Mobile="false"/>
         <part Name="Description" Short="Circuitry gleams wetly behind vacant eyes carved of plantflesh. =pronouns.Possessive= gaping maw suggests a simple question — who was Eater and who was Eaten?"/>
-        <part Name="Render" DisplayName="gourd sentinel" Tile="Andrea52_GourdSentinel/gourd_sentinel.png" TileColor="&amp;O" ColorString="&amp;O" DetailColor="g"/>
         <tag Name="Gender" Value="neuter" />
+    	<part Name="Corpse" CorpseChance="50" CorpseBlueprint="Andrea52_GourdSentinel_Gourd Sentinel Corpse" />
+    	<stag Name="HardMaterial" Value="rind" />
+
+		<property Name="Role" Value="Skirmisher" />
+
+		<stat Name="Level" Value="26"/>
+		<stat Name="Hitpoints" Value="100"/>
+		<stat Name="AV" Value="10"/>
+
+		<stat Name="Strength" sValue="16,1d3,(t)d1"/>
+		<stat Name="Agility" sValue="10,1d3,(t)d1"/>
+		<stat Name="Toughness" sValue="16,1d3,(t)d1"/>
+		<stat Name="Intelligence" sValue="2,1d3,(t)d1" />
+		<stat Name="Willpower" sValue="16,1d3,(t)d1" />
+		<stat Name="Ego" sValue="16,1d3,(t)d1" />
+
+		<skill Name="Persuasion_MenacingStare" />
+		<skill Name="Persuasion_Intimidate" />
+		<skill Name="Cudgel" />
+		<skill Name="Cudgel_Bludgeon" />
+		<skill Name="Cudgel_Expertise" />
+		<skill Name="Cudgel_Slam" />
+		<skill Name="Axe_Expertise" />
+
+    	<mutation Name="Pyrokinesis"/>
+
+		<inventoryobject Blueprint="Andrea52_GourdSentinel_Gourd Jaws"/>
+		<inventoryobject Blueprint="Andrea52_GourdSentinel_Gourd Body Weapon"/>
+
     </object>
+
+	<object Name="Andrea52_GourdSentinel_Gourd Jaws" Inherits="NaturalWeapon">
+    	<part Name="Render" DisplayName="jaws" />
+    	<part Name="MeleeWeapon" Slot="Face" MaxStrengthBonus="9999" BaseDamage="2d4" Skill="Axe" />
+    	<part Name="LatchesOn" InitialSaveTarget="15" InitialSaveStat="Agility" InitialSaveDifficultyStat="Agility" MoveSaveTarget="15" MoveSaveStat="Strength" MoveSaveDifficultyStat="Strength" BreakSaveTarget="15" BreakSaveStat="Strength" BreakSaveDifficultyStat="Strength" Duration="3d4" AutoAttackOnMove="false" AutoAttackOnMoveAway="false" AutoAttackPerTurn="true" BloodSpatterOnLatch="true" />
+		<tag Name="Gender" Value="plural" />
+  	</object>
+
+	<object Name="Andrea52_GourdSentinel_Gourd Body Weapon" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="rolling bulk" />
+    	<part Name="MeleeWeapon" Slot="Body" Stat="Strength" BaseDamage="2d2" Skill="Cudgel" />
+	</object>
+
+	<object Name="Andrea52_GourdSentinel_Gourd Sentinel Corpse" Inherits="Corpse">
+		<part Name="Render" DisplayName="pumpkin corpse" ColorString="&amp;O" TileColor="&amp;O"/>
+		<part Name="Description" Short="A lumpy orange sphere, now immobile and seemingly bereft of life." />
+		<part Name="Butcherable" OnSuccess="@Andrea52_GourdSentinel_Pumpkin Corpse" />
+		<part Name="Commerce" Value="1" />
+		<part Name="Physics" Weight="5" />
+		<tag Name="Tier" Value="5" />
+		<tag Name="DynamicObjectsTable:Corpses" />
+	</object>
+
 </objects>

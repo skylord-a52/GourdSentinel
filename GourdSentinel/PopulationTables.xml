@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+	<population Name="Andrea52_GourdSentinel_Pumpkin Corpse">
+		<group Name="Items" Style="pickone">
+		    <object Blueprint="Andrea52_GourdSentinel_Raw Pumpkin" Number="1" Weight="50" />
+			<table Name="MedScrap" Number="1" Weight="50" />
+			<table Name="Scrap 4R" Number="1" Weight="10" />
+			<table Name="Cybernetics4" Number="1" Weight="1" />
+			<object Blueprint="Andrea52_GourdSentinel_Human Meat" Number="1" Weight="1"/>
+		</group>
+	</population>
+
+	<population Name="TombCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Blueprint="Andrea52_GourdSentinel_Gourd Sentinel" Number="1" Weight="10"/>
+		</group>
+	</population>
+
+	<population Name="Tier5CaveCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Blueprint="Andrea52_GourdSentinel_Gourd Sentinel" Number="1" Weight="5"/>
+		</group>
+	</population>
+</populations>
