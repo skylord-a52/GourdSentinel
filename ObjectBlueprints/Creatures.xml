@@ -51,7 +51,7 @@
     </object>
 
 	<object Name="Andrea52_GourdSentinel_Lesser Gourd" Inherits="Andrea52_GourdSentinel_Gourd Base">
-		<part Name="Render" DisplayName="lesser gourd" Tile="Andrea52_GourdSentinel/lesser_gourd.png"/>
+		<part Name="Render" DisplayName="lesser gourd" Tile="Andrea52_GourdSentinel/lesser_gourd.png" TileColor="&amp;o" ColorString="&amp;o"/>
 		<part Name="Description" Short="Circuitry gleams wetly behind vacant eyes carved of plantflesh, and a candle flickers evilly at its center. =pronouns.Possessive= gaping maw suggests a simple question — who was Eater and who was Eaten?"/>
 
 		<property Name="Role" Value="Skirmisher" />

@@ -12,3 +12,6 @@ v1.2
 Split gourd sentinel into two different creatures, the Lesser Gourd (fires projectiles) and the Greater Gourd (powerful melee attacks).
 Lesser gourds spawn in the jungle occasionally.
 Gourd packs spawn commonly in the Tomb of the Eaters, semi-rarely in Tier 5 caves, and occasionally in the Deep Jungle.
+
+v1.2.1
+Change tile color to dark orange
