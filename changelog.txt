@@ -14,4 +14,5 @@ Lesser gourds spawn in the jungle occasionally.
 Gourd packs spawn commonly in the Tomb of the Eaters, semi-rarely in Tier 5 caves, and occasionally in the Deep Jungle.
 
 v1.2.1
-Change tile color to dark orange
+Lesser gourds now dark orange.
+Updated preview image to match current colors.
