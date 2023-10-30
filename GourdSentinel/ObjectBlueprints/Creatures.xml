@@ -8,45 +8,61 @@
     	<part Name="Corpse" CorpseChance="50" CorpseBlueprint="Andrea52_GourdSentinel_Gourd Sentinel Corpse" />
     	<stag Name="HardMaterial" Value="rind" />
     	<part Name="Body" Anatomy="Andrea52_GourdSentinel Gourd" />
+    	<tag Name="BleedLiquid" Value="sap-900,blood-100" />
+		<tag Name="BleedPrefix" Value="{{W|sappy}} and {{r|bloody}}" />
+		<tag Name="BleedColor" Value="&amp;r" />
+		<part Name="LightSource" Lit="true" Radius="4" />
 
-		<property Name="Role" Value="Skirmisher" />
+		<property Name="Role" Value="Controller" />
 
 		<stat Name="Level" Value="26"/>
-		<stat Name="Hitpoints" Value="100"/>
 		<stat Name="AV" Value="10"/>
 
 		<stat Name="Strength" sValue="16,1d3,(t)d1"/>
 		<stat Name="Agility" sValue="10,1d3,(t)d1"/>
 		<stat Name="Toughness" sValue="16,1d3,(t)d1"/>
 		<stat Name="Intelligence" sValue="2,1d3,(t)d1" />
-		<stat Name="Willpower" sValue="16,1d3,(t)d1" />
-		<stat Name="Ego" sValue="16,1d3,(t)d1" />
+		<stat Name="Willpower" sValue="13,1d3,(t)d1" />
+		<stat Name="Ego" sValue="13,1d3,(t)d1" />
 
 		<skill Name="Persuasion_MenacingStare" />
-		<skill Name="Persuasion_Intimidate" />
 		<skill Name="Cudgel" />
 		<skill Name="Cudgel_Bludgeon" />
 		<skill Name="Cudgel_Expertise" />
 		<skill Name="Cudgel_Slam" />
 		<skill Name="Axe_Expertise" />
-
-    	<mutation Name="Pyrokinesis"/>
-
+		<skill Name="Pistol" />
+		<skill Name="Pistol_SteadyHands" />
 		<inventoryobject Blueprint="Andrea52_GourdSentinel_Gourd Jaws"/>
-		<inventoryobject Blueprint="Andrea52_GourdSentinel_Gourd Body Weapon"/>
+		<inventoryobject Blueprint="Andrea52_GourdSentinel_Gourd Weapon"/>
+		<inventoryobject Blueprint="Andrea52_GourdSentinel_Candle"/>
 
     </object>
 
+	<object Name="Andrea52_GourdSentinel_Candle" Inherits="NaturalMissileWeapon">
+		<part Name="Render" DisplayName="eerie candle" ColorString="&amp;o" RenderString="*" />
+		<part Name="MissileWeapon" RangeIncrement="3" Skill="Pistol" AmmoChar="&amp;R^W&#15;"/>
+		<part Name="BioAmmoLoader" MaxCapacity="1" Available="1" TurnsToGenerate="7" ProjectileObject="Andrea52_GourdSentinel_Candleflame" />
+    	<tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Heavy Weapons/sfx_missile_flamethrower_fire" />
+		<tag Name="UsesSlots" Value="Body" />
+	</object>
+	<object Name="Andrea52_GourdSentinel_Candleflame" Inherits="TemporaryProjectile">
+		<part Name="Render" DisplayName="{{W|candleflame}}" />
+		<part Name="Projectile" BasePenetration="5" BaseDamage="1d2" ColorString="&amp;R" PassByVerb="flicker" Attributes="Heat Fire" />
+		<part Name="TemperatureOnHit" Amount="8d20" Max="false" OnWielderHit="false" />
+    	<part Name="TemperatureOnEntering" Amount="16d20" Max="false" OnWielderHit="false" />
+	</object>
+
 	<object Name="Andrea52_GourdSentinel_Gourd Jaws" Inherits="NaturalWeapon">
-    	<part Name="Render" DisplayName="jaws" />
+    	<part Name="Render" DisplayName="gaping jaws" />
     	<part Name="MeleeWeapon" Slot="Face" MaxStrengthBonus="9999" BaseDamage="2d4" Skill="Axe" />
     	<part Name="LatchesOn" InitialSaveTarget="15" InitialSaveStat="Agility" InitialSaveDifficultyStat="Agility" MoveSaveTarget="15" MoveSaveStat="Strength" MoveSaveDifficultyStat="Strength" BreakSaveTarget="15" BreakSaveStat="Strength" BreakSaveDifficultyStat="Strength" Duration="3d4" AutoAttackOnMove="false" AutoAttackOnMoveAway="false" AutoAttackPerTurn="true" BloodSpatterOnLatch="true" />
 		<tag Name="Gender" Value="plural" />
   	</object>
 
-	<object Name="Andrea52_GourdSentinel_Gourd Body Weapon" Inherits="NaturalWeapon">
+	<object Name="Andrea52_GourdSentinel_Gourd Weapon" Inherits="NaturalWeapon">
 		<part Name="Render" DisplayName="rolling bulk" />
-    	<part Name="MeleeWeapon" Slot="Body" Stat="Strength" BaseDamage="2d2" Skill="Cudgel" />
+    	<part Name="MeleeWeapon" Slot="Back" Stat="Strength" BaseDamage="2d2" Skill="Cudgel" />
 	</object>
 
 	<object Name="Andrea52_GourdSentinel_Gourd Sentinel Corpse" Inherits="Corpse">
